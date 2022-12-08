@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 12:20 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Dec 08, 2022 at 05:16 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,14 +32,14 @@ CREATE TABLE `admin` (
   `aname` varchar(20) NOT NULL,
   `aemail` varchar(20) NOT NULL,
   `apassword` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`aid`, `aname`, `aemail`, `apassword`) VALUES
-(1, 'asadbc', 'bc@gmail.com', 'bhrwa.com');
+(2, 'ahmed', 'admin', 'admin123');
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `covidtest` (
   `timeslot` varchar(50) NOT NULL,
   `hospital` varchar(50) NOT NULL,
   `remarks` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `covidtest`
@@ -69,6 +69,30 @@ CREATE TABLE `covidtest` (
 INSERT INTO `covidtest` (`tid`, `orderno`, `name`, `mobile`, `gmail`, `dob`, `cnic`, `address`, `state`, `timeslot`, `hospital`, `remarks`) VALUES
 (1, 786184, 'ahmed', 315884242, 'momo@gmail.com', '1954-11-22', 2147483647, '321312312', 'karachi', '2022-12-07T14:27', '0', '0'),
 (2, 549154, 'Eden Freeman', 2147483647, 'Sequi ullam laborum ', '1980-12-26', 0, 'Incididunt quia ulla', 'Quia nemo deleniti s', '2010-09-11T08:42', '0', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `mid` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `subject` varchar(50) NOT NULL,
+  `message` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`mid`, `name`, `email`, `subject`, `message`) VALUES
+(1, '', '', '', ''),
+(2, '', '', '', ''),
+(3, '', '', '', ''),
+(4, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -83,17 +107,15 @@ CREATE TABLE `hospital` (
   `hpassword` varchar(20) NOT NULL,
   `hphone` int(11) NOT NULL,
   `haddress` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hospital`
 --
 
 INSERT INTO `hospital` (`hid`, `hname`, `hemail`, `hpassword`, `hphone`, `haddress`) VALUES
-(3, 'ali', 'khan@gmail.com', '123', 1113121424, 'hasjdhagkl'),
-(4, 'ali', 'khan@gmail.com', '123', 1113121424, 'hasjdhagkl'),
-(5, 'ali', 'khan@gmail.com', '123', 1113121424, 'hasjdhagkl'),
-(6, 'ali', 'khan@gmail.com', '123', 1113121424, 'hasjdhagkl');
+(7, 'Agha Khan University Hospital Karachi', 'hospital@gmail', 'hospital123', 212121, 'Karachi'),
+(8, 'Dow Hospital, Ojha Campus Karachi', 'hospital@gmail.com', 'hospital123', 212121, 'Karachi');
 
 -- --------------------------------------------------------
 
@@ -111,14 +133,14 @@ CREATE TABLE `patient` (
   `pcnic` int(13) NOT NULL,
   `paddress` int(50) NOT NULL,
   `pstate` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patient`
 --
 
 INSERT INTO `patient` (`pid`, `pname`, `pmobile`, `pgmail`, `ppass`, `pdob`, `pcnic`, `paddress`, `pstate`) VALUES
-(1, 'ahmed', 336010101, 'aa@gmail.com', 'pp', '2022-12-02', 69, 69, 69);
+(3, 'Ahmed', 336010101, 'patient@gmail.com', 'patient123', '2023-01-03', 2147483647, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -140,7 +162,7 @@ CREATE TABLE `vaccination` (
   `timeslot` varchar(20) NOT NULL,
   `status` varchar(202) NOT NULL,
   `remarks` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vaccination`
@@ -158,16 +180,18 @@ INSERT INTO `vaccination` (`apointmentid`, `name`, `mobile`, `gmail`, `dob`, `cn
 CREATE TABLE `vaccine` (
   `vid` int(11) NOT NULL,
   `vaccine` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vaccine`
 --
 
 INSERT INTO `vaccine` (`vid`, `vaccine`) VALUES
-(1, 'sinovac'),
-(2, 'phizere'),
-(3, 'phizer');
+(4, 'Pfizer'),
+(5, 'omicron'),
+(6, 'Moderna'),
+(7, 'Convidecia'),
+(8, 'AstraZeneca');
 
 --
 -- Indexes for dumped tables
@@ -184,6 +208,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `covidtest`
   ADD PRIMARY KEY (`tid`);
+
+--
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`mid`);
 
 --
 -- Indexes for table `hospital`
@@ -217,7 +247,7 @@ ALTER TABLE `vaccine`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `aid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `aid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `covidtest`
@@ -226,16 +256,22 @@ ALTER TABLE `covidtest`
   MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `hid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `hid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `vaccination`
@@ -247,7 +283,7 @@ ALTER TABLE `vaccination`
 -- AUTO_INCREMENT for table `vaccine`
 --
 ALTER TABLE `vaccine`
-  MODIFY `vid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `vid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
