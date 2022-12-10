@@ -140,7 +140,7 @@ if (mysqli_num_rows($result) > 0) {
                 if (isset($_POST["submit"])) {
                     $hospital = $_POST["hospital"];
 
-                    $query = "UPDATE `covidtest` SET `hospital`='' WHERE `tid`='$id';";
+                    $query = "UPDATE `covidtest` SET `hospital`='$hospital' WHERE `tid`='$id';";
                     $result = mysqli_query($conn, $query);
                     if ($result) {
                         header("location:{$host}covidtestappointment.php");

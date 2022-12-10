@@ -47,7 +47,7 @@ if (!isset($_SESSION["name"])) {
     <!--Start sidebar-wrapper-->
     <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
       <div class="brand-logo">
-        <a href="index.html">
+        <a href="dashboard.php">
           <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
           <h5 class="logo-text">
             <?php
@@ -127,6 +127,11 @@ if (!isset($_SESSION["name"])) {
       <i class="zmdi zmdi-view-dashboard"></i> <span>Vaccine</span>
     </a>
   </li>
+  <li>
+  <a href="hospitalupdatestatus.php">
+    <i class="zmdi zmdi-view-dashboard"></i> <span>Update Covid test remarks</span>
+  </a>
+</li> 
   <li>
   <a href="Vaccinationapplication.php">
     <i class="zmdi zmdi-view-dashboard"></i> <span>Vaccination Appointment</span>
