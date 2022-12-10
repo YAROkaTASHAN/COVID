@@ -19,6 +19,7 @@
                         <tr>
                             <th>Sno.</th>
                             <th>Gmail</th>
+                            <th>Subject</th>
                             <th>Messages</th>
                         </tr>
                     </thead>
@@ -26,6 +27,7 @@
                         <tr>
                             <th>Sno.</th>
                             <th>Gmail</th>
+                            <th>Subject</th>
                             <th>Messages</th>
                         </tr>
                     </tfoot>
@@ -42,12 +44,19 @@
                                 <?php echo $cnt++; ?>
                             </td>
                             <td>
-                                <?php echo $row['email']; ?>
+                            <?php $email = $row['email'];
+                            echo $email;
+                                ?>
+                            </td>
+                            <td>
+                                <?php $subject = $row['subject'];
+                            echo $subject;
+                                ?>
                             </td>
                             <td>
                                 <?php echo $row['message']; ?>
                             </td>
-                            <td class='reply'><a href='replyemail.php?id=<?php echo $row["mid"];  ?>'><i class='fa fa-edit'></i></a></td>
+                            <td class='reply'><a href='replyemail.php?id=<?php echo $row["mid"]; ?>&subject=<?php echo $subject; ?>&email=<?php echo $email; ?>'><i class='fa fa-edit'></i></a></td>
                         </tr>
                         <?php } ?>
                     </tbody>

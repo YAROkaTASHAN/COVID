@@ -5,7 +5,7 @@
           <div class="col-lg-6 mr-auto text-center text-lg-left">
             <span class="d-block subheading">Covid-19 Awareness</span>
             <h1 class="heading mb-3">Stay Safe. Stay Home.</h1>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a, nulla incidunt eaque sit praesentium porro consectetur optio!</p>
+            <p class="mb-5">Stay home stay safe. Stay physically fit. Exercise regulary. Eat a nutritious diet. Don’t smoke.</p>
             <p class="mb-4"><a href="#" class="btn btn-primary">How to prevent</a></p>
 
 
@@ -29,7 +29,7 @@
         <div class="row mb-3">
           <div class="col-lg-7 text-center mx-auto">
             <h2 class="section-heading">Coronavirus Statistics</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptate!</p>
+            <p>If any member of the household shows symptoms of Covid-19, seek medical advice and follow your local health authority's guidance.</p>
           </div>
         </div>
         <div class="row"> 
@@ -81,7 +81,7 @@
           </div>
           <div class="col-lg-5 ml-auto">
             <h2 class="mb-4 section-heading">What is Coronavirus?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officia quas, modi sit eligendi numquam!</p>
+            <p>Stay positive. Avoid alarmist news. Be connected to friends and family. Have a hobby.</p>
             <ul class="list-check list-unstyled mb-5">
               <li>Lorem ipsum dolor sit amet</li>
               <li>Consectetur adipisicing elit</li>
@@ -156,7 +156,6 @@
                   </div>
                   <div class="body">
                     <h3>Stay at home</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, debitis!</p>
                   </div>
                 </div>
 
@@ -166,7 +165,6 @@
                   </div>
                   <div class="body">
                     <h3>Wear facemask</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, debitis!</p>
                   </div>
                 </div>
               </div>
@@ -177,7 +175,6 @@
                   </div>
                   <div class="body">
                     <h3>Keep social distancing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, debitis!</p>
                   </div>
                 </div>
 
@@ -187,7 +184,6 @@
                   </div>
                   <div class="body">
                     <h3>Wash your hands</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, debitis!</p>
                   </div>
                 </div>
               </div>
@@ -196,8 +192,8 @@
           </div>
           <div class="col-lg-5 ml-auto">
             <h2 class="section-heading mb-4">How to Prevent Coronavirus?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis doloribus consequatur fugit voluptatum ex rerum perspiciatis cupiditate, esse hic!</p>
-            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, error!</p>
+            <p>Stay home stay safe. Follow the Golden Rule. Wash your hands frequently with soap and water or use alchohol based hand-rub.</p>
+            <p class="mb-4">Stay home stay safe. Stay physically fit. Exercise regulary. Eat a nutritious diet. Don’t smoke.!</p>
 
             <ul class="list-check list-unstyled mb-5">
               <li>Lorem ipsum dolor sit amet</li>
