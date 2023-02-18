@@ -7,7 +7,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Covid19-Testing</h1>
     <p class="danger">If ur Registered Please <a href="login.php">login</a></p>
-   
+
     <form action="c_test.php" method="post">
         <div class="row">
 
@@ -21,16 +21,21 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" class="form-control" id="fullname" name="pname" placeholder="Enter your full name..." pattern="[A-Za-z ]+" title="letters only" required="true">
+                            <input type="text" class="form-control" id="fullname" name="pname"
+                                placeholder="Enter your full name..." pattern="[A-Za-z ]+" title="letters only"
+                                required="true">
                         </div>
                         <div class="form-group">
                             <label>Mobile Number</label>
-                            <input type="text" class="form-control" id="mobilenumber" name="pmobile" placeholder="Please enter your mobile number" pattern="[0-9]{10}" title="10 numeric characters only" required="true" onBlur="mobileAvailability()">
+                            <input type="text" class="form-control" id="mobilenumber" name="pmobile"
+                                placeholder="Please enter your mobile number" pattern="[0-9]{11}"
+                                title="10 numeric characters only" required="true" onBlur="mobileAvailability()">
                             <span id="mobile-availability-status" style="font-size:12px;"></span>
                         </div>
                         <div class="form-group">
                             <label>Gmail</label>
-                            <input type="text" class="form-control" id="gmail" name="pgmail" placeholder="Enter Gmail" required="true">
+                            <input type="text" class="form-control" id="gmail" name="pgmail" placeholder="Enter Gmail"
+                                required="true">
                         </div>
                         <div class="form-group">
                             <label>DOB</label>
@@ -38,15 +43,18 @@
                         </div>
                         <div class="form-group">
                             <label>CNIC</label>
-                            <input type="text" class="form-control" id="cnic" name="pcnic" placeholder="CNIC" required="true">
+                            <input type="text" class="form-control" id="cnic" name="pcnic" placeholder="CNIC"
+                                required="true">
                         </div>
                         <div class="form-group">
                             <label>Address</label>
-                            <textarea class="form-control" id="address" name="paddress" required="true" placeholder="Enter your full addres here"></textarea>
+                            <textarea class="form-control" id="address" name="paddress" required="true"
+                                placeholder="Enter your full addres here"></textarea>
                         </div>
                         <div class="form-group">
                             <label>State</label>
-                            <input type="text" class="form-control" id="state" name="pstate" placeholder="Enter your State Here" required="true">
+                            <input type="text" class="form-control" id="state" name="pstate"
+                                placeholder="Enter your State Here" required="true">
                         </div>
                     </div>
                 </div>
@@ -64,7 +72,8 @@
 
                         <div class="form-group">
                             <label>Time Slot for Test</label>
-                            <input type="datetime-local" class="form-control" id="birthdaytime" name="testtime" class="form-control">
+                            <input type="datetime-local" class="form-control" id="birthdaytime" name="testtime"
+                                class="form-control">
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary btn-user btn-block" name="submit" id="submit">

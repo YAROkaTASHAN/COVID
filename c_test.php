@@ -11,9 +11,12 @@ if (isset($_POST["submit"])) {
     $pstate = $_POST["pstate"];
     $testtime = $_POST["testtime"];
     $sql = "INSERT INTO `covidtest`(`orderno`,`name`, `mobile`, `gmail`, `dob`, `cnic`, `address`, `state`, `timeslot`, `hospital`, `remarks`) VALUES ('{$orderno}','{$pname}','{$pmobile}','{$pgmail}','{$pdob}','{$pcnic}','{$paddress}','{$pstate}','{$testtime}','0','0');";
-    mysqli_query($conn, $sql);
-    echo "<SCRIPT>
-        alert(Copy ur order no for searching ur result:.'$orderno')
-        window.location.replace('index.php');
-    </SCRIPT>";
+    if (mysqli_query($conn, $sql)) {
+        echo "<script>
+          alert('Copy your order number for searching your result: $orderno');
+          window.location.href = 'index.php';
+        </script>";
+    }
+    ;
+
 }

@@ -160,7 +160,7 @@
 
                         <tr>
                             <th>Report</th>
-                            <td><a href="reportfiles/<?php echo $row['FinalReport']; ?>" target="_blank">Download</a>
+                            <td><a href="vendor/reportdownload.php?id=<?php echo $mobile ?>" target="_blank">Download</a>
                             </td>
                         </tr>
 
